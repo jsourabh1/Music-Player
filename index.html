@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Music_player</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- <script src="index.js"></script> -->
+
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+
+
+    
+</head>
+<body>
+
+    <div class="main_div">
+
+        <div class="music_player">
+
+            <h2 class="song_name">We Rollin</h2>
+            <h3 class="artist_name">subh</h3>
+            <div class="image-container">
+                     <img src="858789.jpg" alt="photo">
+            </div>
+            <audio src="We_Rollin-Shubh-(Djjaani.com).mp3"></audio>
+
+            <div class="audio_controls">
+
+                <i class="fas fa-backward" id="previous" title="previous"></i>
+
+                <i class="fas fa-play-circle" id="play" title="play"></i>
+
+                <i class="fas fa-forward" id="next" title="next"></i>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+    
+</body>
+
+<script>
+
+
+    const play = document.getElementById("play");
+
+    const music = document.querySelector("audio");
+    const image= document.querySelector("img")
+
+
+    play.addEventListener("click", first)
+
+    var count=0
+
+    function first() {
+
+        if (count%2===0){
+            
+            music.play();
+            play.classList.replace("fa-play-circle","fa-pause-circle");
+            console.log("saurabh jian ");
+            image.classList.add("anime");
+            count+=1
+        }
+        else{
+
+            music.pause();
+            count+=1;
+            play.classList.replace("fa-pause-circle", "fa-play-circle");
+
+        }
+        
+
+    }
+
+
+
+</script>
+</html>

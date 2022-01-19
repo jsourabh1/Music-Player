@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&family=Stylish&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+
+    font-size: 62.5%;
+    font-family: "jost",sans-serif;
+
+
+}
+
+.main_div{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(121, 224, 228);
+    display: grid;
+    place-items: center;
+
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around; */
+
+    /* padding-top: 5rem; */
+}
+
+.music_player{
+    background-color: rgb(210, 177, 30);
+    width: 35rem;
+    height: 55rem;
+    border-radius: 3rem;
+    box-shadow: 1rem 1rem 1rem 1rem rgb(0,0,0,0.2) ;
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    align-items: center;
+    color: black;
+
+    /* font-weight: 55rem; */
+
+
+
+
+
+}
+
+.song_name{
+
+    /* background-color:white; */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    word-spacing: 0.1rem;
+    font-size:3rem;
+    color: white;
+    text-shadow: 0 0.3rem 0.5rem   rgb(0,0,0,0.9);
+    margin: 2rem 0 1rem 0;
+
+    
+}
+/* .song_name::first-line{
+    background-color: blue;
+} */
+
+.artist_name{
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    word-spacing: 0.1rem;
+
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0.3rem 0.5rem   rgb(0,0,0,0.9);
+    margin: 1rem 0 1rem 0;
+}
+
+
+
+.image-container{
+    
+    /* padding-top: 1rem; */
+    width: 25rem;
+    height: 25rem;
+    /* margin: auto; */
+    margin: 2.2rem;
+}
+
+img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+    
+    border-radius: 30rem; 
+    box-shadow: 0 1.2rem 3rem 0 rgb(0,0,0,0.4);
+}
+
+.audio_controls{
+
+
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3rem;
+    
+
+}
+
+.audio_controls .fas{
+
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgb(8, 63, 58);
+    filter: drop-shadow(0 0  0.75rem rgb(39, 163, 172));
+}
+#play{
+
+    font-size: 5rem;
+}
+
+.audio_controls .fas:hover{
+
+    color: white;
+}
+
+.anime{
+    /* width: 25rem; */
+    /* border-radius: 20rem !important; */
+    box-shadow: 1rem 1.2rem 3rem 0 rgba(202, 21, 21, 0.4);
+    animation: rotatePlayer 3s linear infinte;
+
+}
+
+@keyframes rotatePlayer {
+
+    from {
+        transform: rotate(0deg);
+
+    }
+    to {
+        transform: rotate(180deg);
+    }
+
+    
+}
