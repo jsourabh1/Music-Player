@@ -22,8 +22,8 @@
 
         <div class="music_player">
 
-            <h2 class="song_name">We Rollin</h2>
-            <h3 class="artist_name">subh</h3>
+            <h2 class="song_name">Ever Green</h2>
+            <h3 class="artist_name">Jigar</h3>
             <div class="image-container">
                      <img src="Ever Green-Jigar.jpg" alt="photo">
             </div>
@@ -39,22 +39,8 @@
 
 
             </div>
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
     </div>
-    
-    
 </body>
 
 <script>
@@ -65,9 +51,9 @@
     const music = document.querySelector("audio");
     const image= document.querySelector("img");
 
-    var artistname=document.getElementsByClassName("artist_name");
+    var artistname=document.querySelector("h3")
 
-    var songname=document.getElementsByClassName("song_name");
+    var songname=document.querySelector("h2");
 
     const prev=document.getElementById("previous");
 
@@ -176,6 +162,8 @@
         console.log(songname.textContent);
 
         artistname.textContent=song.artist;
+        // artistname.textContent = "saurabh jain ";
+
         
         console.log(artistname.textContent);
         
