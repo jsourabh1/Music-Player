@@ -132,7 +132,7 @@ img{
     /* width: 25rem; */
     /* border-radius: 20rem !important; */
     box-shadow: 1rem 1.2rem 3rem 0 rgba(202, 21, 21, 0.4);
-    animation: rotatePlayer 3s linear infinte;
+    animation: rotatePlayer 3s infinite linear;
 
 }
 
@@ -143,7 +143,7 @@ img{
 
     }
     to {
-        transform: rotate(180deg);
+        transform: rotate(360deg);
     }
 
     

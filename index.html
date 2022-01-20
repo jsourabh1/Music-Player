@@ -25,7 +25,7 @@
             <h2 class="song_name">We Rollin</h2>
             <h3 class="artist_name">subh</h3>
             <div class="image-container">
-                     <img src="858789.jpg" alt="photo">
+                     <img src="Ever Green-Jigar.jpg" alt="photo">
             </div>
             <audio src="295 - Sidhu Moose Wala.mp3"></audio>
 
@@ -67,20 +67,64 @@
     const play = document.getElementById("play");
 
     const music = document.querySelector("audio");
-    const image= document.querySelector("img")
+    const image= document.querySelector("img");
+
+    const artistname=document.getElementsByClassName("artist_name");
+
+    const songname=document.getElementsByClassName("song_name");
+
+    const prev=document.getElementById("previous");
+
+    const next=document.getElementById("next");
 
 
-    play.addEventListener("click", first)
+    const songs=
+    [
+        {
+            Name : "Ever Green-Jigar",
+            title : "Ever Green",
+            artist : "Jigar",
 
-    var count=0
+        },
+        {
+            Name: "We_Rollin-Shubh",
+            title: "We rollin",
+            artist: "Subh",
+        },
+        {
+            Name: "Nazar-pulkit",
+            title: "Nazar",
+            artist: "Pulkit Arora",
+        },
+        {
+            Name: "Kya Mujhe Pyar Hai 2.0 - pritam",
+            title: "Kya mujhe pyaar h",
+            artist: "Pritam",
+        },
+        {
+            Name: "295 - Sidhu Moose Wala",
+            title: "295",
+            artist: "Sidhu Moose Wala",
+        },
+    ]
 
-    function first() {
 
-        if (count%2===0){
+
+    play.addEventListener("click", first);
+
+    var count=0;
+
+    function first() 
+    {
+
+        if (count%2===0)
+        {
             
             music.play();
             play.classList.replace("fa-play-circle","fa-pause-circle");
             console.log("saurabh jian ");
+            artistname.textContent="saurabh jain ";
+            console.log(artistname.textContent);
             image.classList.add("anime");
             count+=1
         }
@@ -89,12 +133,31 @@
             music.pause();
             count+=1;
             play.classList.replace("fa-pause-circle", "fa-play-circle");
+            image.classList.remove("anime");
 
         }
         
 
     }
 
+    function loadsongs(song){
+
+        songname.textContent=song.title;
+        
+        console.log(songname.textContent);
+
+        artistname.textContent=song.artist;
+        
+        console.log(artistname.textContent);
+        
+        music.src=`${song.Name}.mp3`;
+        image.src=`${song.Name}.jpg`;
+        console.log("saurabh jain ");
+
+
+
+    }
+    loadsongs(songs[3]);
 
 
 </script>
