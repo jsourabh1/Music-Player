@@ -110,23 +110,31 @@
 
     // previous song fucntion 
     prev.addEventListener("click", ()=>{
-            if (index==0) {
+        // console.log(index)
+            index-=1
+            if (index<0) {
                 index = 4;
             }
             loadsongs(songs[index]);
-            index -= 1;});
+            
+        });
     //next song fucntion 
     next.addEventListener("click",()=>{
-        if (index==4) {
+
+        // console.log(index);
+        index+=1
+        if (index>4) {
             index = 0;
 
         }
         loadsongs(songs[index]);
-        index += 1;
+    
 
     });
 
     var count=0;
+
+    var check=false;
 
     function first() 
     {
@@ -139,7 +147,7 @@
                 loadsongs(songs[0]);
 
             }
-            
+            check=true;
             music.play();
             play.classList.replace("fa-play-circle","fa-pause-circle");
         
@@ -148,7 +156,7 @@
             count+=1
         }
         else{
-
+            check=false;
             music.pause();
             count+=1;
             play.classList.replace("fa-pause-circle", "fa-play-circle");
@@ -162,6 +170,7 @@
     function loadsongs(song){
 
         music.pause();
+        let temp=song.title
         songname.textContent=song.title;
         
         console.log(songname.textContent);
@@ -173,7 +182,7 @@
         music.src=`${song.Name}.mp3`;
         image.src=`${song.Name}.jpg`;
         console.log("saurabh jain ");
-        music.play();
+        if (check){music.play();}
 
 
 
